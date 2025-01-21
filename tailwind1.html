@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com" ></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Tilesimple</title>
+
+  <style>
+    /* Add the CSS for the button here */
+    .scroll-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #4CAF50; /* Green background */
+        color: white; /* White text */
+        border: none; /* No border */
+        border-radius: 5px; /* Rounded corners */
+        padding: 10px; /* Some padding */
+        font-size: 24px; /* Font size for the icon */
+        cursor: pointer; /* Pointer cursor on hover */
+        transition: background-color 0.3s; /* Smooth background color transition */
+        display: flex; /* Flexbox for centering */
+        align-items: center; /* Center the icon vertically */
+        justify-content: center; /* Center the icon horizontally */
+    }
+
+    .scroll-to-top:hover {
+        background-color: #45a049; /* Darker green on hover */
+    }
+
+    .hidden {
+        display: none; /* Hide the button */
+    }
+</style>
+</head>
+<body>
+    <!-- HEADER -->
+     <header class="bg-gray-900 fixed top-0 w-full z-50">
+       <nav class="text-white w-11/12 md:container mx-auto py-4 flex justify-between items-center">
+           <a href="" class="text-3xl font-bold">Tail Simple</a>
+           <ul class="hidden md:flex bg-gray-900">
+               <li class="px-7 py-1 hover:text-gray-500"><a href="#Services">Services</a></li>
+               <li class="px-7 py-1 hover:text-gray-500"><a href="#Portofolio">Portofolio</a></li>
+               <li class="px-7 py-1 hover:text-gray-500"><a href="#About">About</a></li>
+               <li class="px-7 py-1 hover:text-gray-500"><a href="" class="border-2 border-red-500 py-2 px-5 hover:bg-red-500 text-white rounded-xl">Getting Started</a></li>
+           </ul>
+       </nav>
+     </header>
+   
+<!-- HERO SECTION -->
+<!-- HERO SECTION -->
+<section class="bg-gray-900 relative h-screen pt-24" id="heroSection"> <!-- Added id for reference -->
+    <div class="absolute inset-0 bg-cover bg-center transition-filter duration-300 ease-in-out" id="heroImage" style="background-image: url('https://lh3.googleusercontent.com/p/AF1QipOyDDvmGinTbhMB1R9uOSbLuDh1JL2jmZPsBaa1=s680-w680-h510'); filter: blur(0px); opacity: 0.5;;"></div> <!-- Set initial blur to 0 -->
+    <div class="container mx-auto text-left text-white h-full flex flex-col justify-center items-start relative z-10 px-4">
+        <h1 class="text-6xl font-bold mb-2">STTIKOM INSAN UNGGUL</h1>
+        <h2 class="text-3xl font-semibold mb-5">Memberdayakan Inovator Masa Depan</h2>
+        <p class="text-lg mb-5 max-w-2xl">STTIKOM INSAN UNGGUL berkomitmen untuk menyediakan pendidikan berkualitas tinggi dalam teknologi dan sistem informasi. Misi kami adalah untuk mengembangkan profesional yang terampil dan siap menghadapi tantangan di era digital.</p>
+        <a href="" class="bg-green-500 text-white py-3 px-6 rounded-lg hover:bg-green-600 transition duration-300">Pelajari Lebih Lanjut</a>
+    </div>
+</section>
+
+<script>
+    window.addEventListener('scroll', function() {
+        const heroImage = document.getElementById('heroImage');
+        const scrollPosition = window.scrollY;
+
+        // Adjust blur based on scroll position
+        const maxScroll = 150; // Maximum scroll distance to increase blur
+        const blurAmount = Math.min((scrollPosition / maxScroll) * 10, 10); // Calculate blur amount, max 10px
+        heroImage.style.filter = `blur(${blurAmount}px)`; // Set the blur of the background image
+    });
+</script>
+<!-- SERVICE -->
+    <section id="Services" class=" bg-gray-200 py-20">
+        <div class="container mx-auto">
+            <h3 class=" text-5xl font-bold text-center mb-5">Program Studi</h3>
+            <p class="text-gray-500 text-center mb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem, expedita!</p>
+            <div class=" grid grid-cols-2 gap-8">
+                <!-- Services 1-->
+                <div class="flex space-x-5 py-8 px-8 bg-white rounded-xl">
+                    <img src="https://placehold.co/100"/>
+                    <div>
+                        <h4  class=" text-2xl font-bold mb-5 ">Data Analytic</h4>
+                        <p class="text-gray-500 mb-5"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima nostrum maxime asperiores culpa reiciendis adipisci.</p>
+                        <a href="" class="hover:text-gray-500">Read More</a>
+                    </div>
+                </div>
+                <!-- Services 2-->
+                <div class="flex space-x-5 py-8 px-8 bg-white rounded-xl">
+                    <img src="https://placehold.co/100"/>
+                    <div>
+                        <h4  class=" text-2xl font-bold mb-5 ">Sosial Media Assistent</h4>
+                        <p class="text-gray-500 mb-5"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima nostrum maxime asperiores culpa reiciendis adipisci.</p>
+                        <a href="" class="hover:text-gray-500">Read More</a>
+                    </div>
+                </div>
+                <!-- Services 3-->
+                <div class="flex space-x-5 py-8 px-8 bg-white rounded-xl">
+                    <img src="https://placehold.co/100"/>
+                    <div>
+                        <h4  class=" text-2xl font-bold mb-5 ">Depeloper & Mintenance</h4>
+                        <p class="text-gray-500 mb-5"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima nostrum maxime asperiores culpa reiciendis adipisci.</p>
+                        <a href="" class="hover:text-gray-500">Read More</a>
+                    </div>
+                </div>
+                <!-- Services4 -->
+                <div class="flex space-x-5 py-8 px-8 bg-white rounded-xl">
+                    <img src="https://placehold.co/100"/>
+                    <div>
+                        <h4  class=" text-2xl font-bold mb-5 ">24/7 Protection</h4>
+                        <p class="text-gray-500 mb-5"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima nostrum maxime asperiores culpa reiciendis adipisci.</p>
+                        <a href="" class="hover:text-gray-500">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    
+    <!-- PORTOFOLIO -->
+     <section id="Portofolio" class="py-20 bg-white">
+        <h3 class=" text-5xl font-bold text-center mb-5 ">Portofolio</h3>
+        <p class="text-gray-500 mb-5 text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, quibusdam.</p>
+        <div class="grid grid-cols-4 container mx-auto gap-6" >
+            <!-- Portofolio 1 -->
+            <div class="shadow-xl">
+                <a href="">
+                    <img src="https://placehold.co/600x400" class="w-full"/>
+                    <div class=" py-3 px-5">
+                        <h4 class=" text-center font-bold">Website 1</h4>
+                    </div>
+                </a>
+            </div>
+            <!-- Portofolio 2 -->
+            <div class="shadow-xl">
+                <a href="">
+                    <img src="https://placehold.co/600x400" class="w-full"/>
+                    <div class=" py-3 px-5">
+                        <h4 class=" text-center font-bold">Website 2</h4>
+                    </div>
+                </a>
+            </div>
+            <!-- Portofolio 3 -->
+            <div class="shadow-xl">
+                <a href="">
+                    <img src="https://placehold.co/600x400" class="w-full"/>
+                    <div class=" py-3 px-5">
+                        <h4 class=" text-center font-bold">Website 3</h4>
+                    </div>
+                </a>
+            </div>
+            <!-- Portofolio 4 -->
+            <div class="shadow-xl">
+                <a href="">
+                    <img src="https://placehold.co/600x400" class="w-full"/>
+                    <div class=" py-3 px-5">
+                        <h4 class=" text-center font-bold">Website 4</h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+     </section>
+
+     <!-- ABOUT -->
+      <section id="About" class="container mx-auto">
+        <div class=" flex space-x-10 items-start py-20 ">
+            <img src="https://placehold.co/300"/>
+            <div>
+                <p class="mb-5 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, aliquid.</p>
+                <h3 class="text-5xl font-bold mb-5">About Tail Simple</h3>
+                <p class="mb-5"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime iste eveniet iure. Dicta repudiandae repellendus suscipit recusandae voluptates, itaque dolore? Placeat vitae similique impedit deleniti fugit iure velit magni eligendi.</p>
+                <p class="mb-5 pb-5 border-b border-gray-900 "> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos eum dignissimos ratione possimus et exercitationem iure in at illum quam! Eaque incidunt fuga iure recusandae!</p>
+                <ul class=" flex space-x-5">
+                    <li>
+                        <a href=""><i class="fa-brands fa-tiktok"></i>Tiktok</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa-brands fa-instagram"></i>Instagram</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa-brands fa-twitter"></i>Twiter</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa-brands fa-youtube"></i>Youtube</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </section>
+      
+       <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="scroll-to-top hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Get the button
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+        // Show the button when scrolling down
+        window.addEventListener('scroll', function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollToTopBtn.classList.remove('hidden');
+            } else {
+                scrollToTopBtn.classList.add('hidden');
+            }
+        });
+
+        // Scroll to top when the button is clicked
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Smooth scroll effect
+            });
+        });
+    </script>
+</body>
+</html>
